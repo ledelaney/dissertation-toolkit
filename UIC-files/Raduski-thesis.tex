@@ -1,0 +1,115 @@
+% UICTEST.TEX
+% This is a test file for my port of UICTHESI
+% to LaTeX 2e. This is based in part on UCTHESIS.
+%
+
+\documentclass{uicthesi}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{booktabs}
+%\usepackage{natbib}
+\heavyrulewidth 0.09em
+\cmidrulekern 0.2em
+\usepackage{multirow}
+\renewcommand\multirowsetup{\centering}
+\usepackage{pdfpages}
+
+
+\begin{document}
+
+% Declarations for Front Matter
+\title{Self-incompatibility and Biosystematics in the Wild Chilean Tomato Group (Solanum sect. Lycopersicum)}
+\author{Andrew R. Raduski}
+\pdegrees{B.A. (Indiana University) 2007}
+\degree{Doctor of Philosophy in Biological Sciences}
+\committee{Boris Igi\'{c}, Chair and Advisor \\ Roberta Mason-Gamer \\ Henry F. Howe \\ Andrew Hipp -- Morton Arboretum \\ Richard Ree -- Field Museum of Natural History} 
+\maketitle
+\copyrightpage
+
+
+\dedication
+{\null\vfil
+{\large
+\begin{center}
+To my friends and family,\\\vspace{12pt}
+for their unwavering support and distractions.
+\end{center}}
+\vfil\null}
+
+
+%\acknowledgements
+\contributions
+\input{contributions.tex}
+
+%\preface
+%This preface is purely optional at UIC.
+
+\tableofcontents
+\listoftables
+\listoffigures
+\listofabbreviations
+\begin{list}
+{}
+{\setlength
+   {\labelwidth}{1in}
+    \setlength{\leftmargin}{1.5in}
+    \setlength{\labelsep}{.5in}
+    \setlength{\rightmargin}{\leftmargin}}
+\item[SI\hfill] Self-incompatibility
+\item[SC\hfill] Self-compatibility
+\item[PSC\hfill] Partial self-compatibility
+\item[ISI\hfill] Index of self-incompatibility
+\item[{\em t}\hfill] Outcrossing rate
+\item[{\em t$_{m}$}\hfill] Multilocus outcrossing rate
+\item[{\em t$_{s}$}\hfill] Single locus outcrossing rate
+\item[RADseq\hfill] Restriction site associated DNA sequencing
+\item[PCA\hfill] Principal components analysis
+\item[PC\hfill] Principal component
+
+%\item[CTAN\hfill] Comprehensive \TeX\ Archive Network
+%\item[TUG\hfill] \TeX\ Users Group
+%\item[UIC\hfill] University of Illinois at Chicago
+%\item[UICTHESI\hfill] Thesis formatting system for use at UIC.
+\end{list}
+
+\abstract
+\input{abstract.tex}
+
+\summary
+\input{summary.tex}
+
+%\includepdf[pages={-}]{chapter-1-license.pdf}
+\chapter{The expression of self-incompatibility in angiosperms is bimodal}
+\input{chapter-1-isi-metaanalysis.tex}
+\clearpage
+
+% Publisher permission
+%\newpage
+%\includepdf[pages={-}]{chapter-1-license.pdf}
+
+\chapter{Characterization of breeding system variation and its effect on the mating system of a wild tomato species}
+\input{chapter-2-chilense-isi-t.tex}
+
+
+\chapter{Biosystematic studies on the status of \textit{Solanum chilense} (Dun.) Reiche}
+\input{chapter-3-atacamense.tex}
+
+
+\appendices
+\newpage
+\appendix
+\chapter{Chapter 1 supplemental material}
+\input{ISI-supp.tex}
+
+%\chapter{Some More Ancillary Stuff}
+
+
+%\nocite{*}
+\bibforma
+\bibliography{bibs/thesis-refs}
+\newpage
+\vita
+\input{cv-arr.tex}
+%This is where the vita goes.  Its organization is left as an exercise.
+
+\end{document}
